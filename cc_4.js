@@ -46,3 +46,23 @@ accelerate(){
     console.log (`Battery level: ${this.charge}%`); 
     }
 }
+
+//Create an EV object using the provided test data and experiment with calling the accelerate, brake, and chargeBattery methods.
+const tesla = new EV('Tesla', 120, 23);
+
+//Observe and document the behavior of the EV object, particularly how the battery charge impacts the ability to accelerate.
+console.log("Initial state:");
+console.log(`Speed: ${tesla.current_kmh} km/h, Battery charge: ${tesla.charge}%`);
+
+tesla.accelerate();
+tesla.brake();
+tesla.chargeBattery(50);
+
+tesla.accelerate();
+tesla.brake();
+
+tesla.accelerate();
+tesla.brake();
+
+console.log("After performing actions:");
+console.log(`Speed: ${tesla.current_kmh} km/h, Battery charge: ${tesla.charge}%`);
