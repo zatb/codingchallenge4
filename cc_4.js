@@ -38,4 +38,11 @@ chargeBattery(chargeTo) {
     this.charge = chargeTo;
     console.log (`${this.make}'s battery is charged to ${this.charge}%.`);
     }  
+    
+//Override the accelerate method in the EV class to increase the car's speed by 20 km/h and decrease the battery charge by 1%.
+accelerate(){
+    super.accelerate();
+    this.charge -= 1;
+    console.log (`Battery level: ${this.charge}%`); 
+    }
 }
